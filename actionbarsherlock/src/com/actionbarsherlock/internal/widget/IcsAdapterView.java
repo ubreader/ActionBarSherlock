@@ -1102,7 +1102,7 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
      * Utility to keep mSelectedPosition and mSelectedRowId in sync
      * @param position Our current position
      */
-    void setSelectedPositionInt(int position) {
+    protected void setSelectedPositionInt(int position) {
         mSelectedPosition = position;
         mSelectedRowId = getItemIdAtPosition(position);
     }
@@ -1112,7 +1112,7 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
      * @param position Intended value for mSelectedPosition the next time we go
      * through layout
      */
-    void setNextSelectedPositionInt(int position) {
+    protected void setNextSelectedPositionInt(int position) {
         mNextSelectedPosition = position;
         mNextSelectedRowId = getItemIdAtPosition(position);
         // If we are trying to sync to the selection, update that too
